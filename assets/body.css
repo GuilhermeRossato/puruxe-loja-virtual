@@ -247,13 +247,18 @@ footer {
 .socials {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .socials a {
   background: rgba(255, 255, 255, 0.1);
   padding: 8px 12px;
-  border-radius: 50%;
+  border-radius: 6px;
+}
+
+.socials a:hover{
+  background: rgba(255, 255, 255, 0.2);
 }
 
 
