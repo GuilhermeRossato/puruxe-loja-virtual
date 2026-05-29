@@ -48,69 +48,44 @@
           <li><a href="para-ocasioes-especiais.html">Para Ocasiões Especiais</a></li>
           <li><a href="encomendas-e-contato.html">Encomendas & Contato</a></li>
         </ul>
-        <style>
-          .main-nav a:hover {
-            text-decoration: underline;
-          }
-          .main-nav a.active {
-            background: rgba(255, 192, 203, 0.2);
-            opacity: 0.7;
-            pointer-events: none;
-            cursor: default;
-          }
-        </style>
-        <script>
-          document.addEventListener('DOMContentLoaded', function () {
-            const links = document.querySelectorAll('.main-nav a');
-            const currentPage = window.location.pathname.split('/').pop();
-            console.log('Current page:', currentPage);
-            links.forEach(link => {
-              const linkPage = link.getAttribute('href').split('/').pop();
-              console.log('Checking link:', linkPage);
-              if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
-                console.log('Match found, adding active class to:', linkPage);
-                link.classList.add('active');
-              }
-            });
-          });
-        </script>
+        <script src="./assets/nav.js" defer async></script>
       </nav>
   </header>
   <!-- FIM CABEÇALHO -->
   <!-- SEÇÃO HERO (DESTAQUE) -->
   <div class="hero-wrapper">
-  <section class="hero">
-    <div class="hero-image-container desktop-only">
-      <div class="hero-main-img" style="background-image: url('./assets/hero.jpg');"></div>
-    </div>
+    <section class="hero">
+      <div class="hero-image-container desktop-only">
+        <div class="hero-main-img" style="background-image: url('./assets/hero.jpg');"></div>
+      </div>
 
-    <div class="hero-image-container mobile-only text-center">
-      <!-- Representação da ilustração mobile -->
-      <img src="./assets/hero.jpg" alt="Ilustração doceira" class="hero-mobile-img" style="border-radius: 50%;">
-    </div>
+      <div class="hero-image-container mobile-only text-center">
+        <!-- Representação da ilustração mobile -->
+        <img src="./assets/hero.jpg" alt="Ilustração doceira" class="hero-mobile-img" style="border-radius: 50%;">
+      </div>
 
-    <div class="hero-content">
-      <!-- <h2 class="desktop-only title-large">Celebre os Momentos Mais Doces</h2> -->
-      <img class="desktop-only mb-2" src="./assets/celeb-500-111.png" width="500" height="111" alt="Destaques do Dia">
+      <div class="hero-content">
+        <!-- <h2 class="desktop-only title-large">Celebre os Momentos Mais Doces</h2> -->
+        <img class="desktop-only mb-2" src="./assets/celeb-500-111.png" width="500" height="111" alt="Destaques do Dia">
 
-      <!-- <p class="desktop-only subtitle">Artesanal. Inovador. Inesquecível.</p> -->
+        <!-- <p class="desktop-only subtitle">Artesanal. Inovador. Inesquecível.</p> -->
 
-      <h2 class="mobile-only title-mobile">Doces que Abraçam o Coração</h2>
-      <button class="btn-primary mobile-only">Saiba Mais</button>
+        <h2 class="mobile-only title-mobile">Doces que Abraçam o Coração</h2>
+        <button class="btn-primary mobile-only">Saiba Mais</button>
 
-      <div class="promo-box desktop-only flex">
-        <div class="promo-text">
-          <h3>Uma Doçura<br>para sua Mãe</h3>
-          <p class="mt-4">Caixa de Brigadeiros Gourmet</p>
-          <button class="btn-primary mt-4">Explore a Nossa Coleção</button>
-        </div>
-        <div class="promo-images">
-          <img src="./assets/c.jpg" alt="Caixa de doces 1">
+        <div class="promo-box desktop-only flex">
+          <div class="promo-text">
+            <h3>Uma Doçura<br>para sua Mãe</h3>
+            <p class="mt-4">Caixa de Brigadeiros Gourmet</p>
+            <button class="btn-primary mt-4">Explore a Nossa Coleção</button>
+          </div>
+          <div class="promo-images">
+            <img src="./assets/c.jpg" alt="Caixa de doces 1">
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-</div>
+    </section>
+  </div>
   <!-- SEÇÃO DE PRODUTOS -->
   <section class="products">
     <div class="section-header">

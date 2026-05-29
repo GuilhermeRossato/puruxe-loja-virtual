@@ -99,32 +99,7 @@
           <li><a href="para-ocasioes-especiais.html">Para Ocasiões Especiais</a></li>
           <li><a href="encomendas-e-contato.html">Encomendas & Contato</a></li>
         </ul>
-        <style>
-          .main-nav a:hover {
-            text-decoration: underline;
-          }
-          .main-nav a.active {
-            background: rgba(255, 192, 203, 0.2);
-            opacity: 0.7;
-            pointer-events: none;
-            cursor: default;
-          }
-        </style>
-        <script>
-          document.addEventListener('DOMContentLoaded', function () {
-            const links = document.querySelectorAll('.main-nav a');
-            const currentPage = window.location.pathname.split('/').pop();
-            console.log('Current page:', currentPage);
-            links.forEach(link => {
-              const linkPage = link.getAttribute('href').split('/').pop();
-              console.log('Checking link:', linkPage);
-              if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
-                console.log('Match found, adding active class to:', linkPage);
-                link.classList.add('active');
-              }
-            });
-          });
-        </script>
+        <script src="./assets/nav.js" defer async></script>
       </nav>
   </header>
   <!-- FIM CABEÇALHO -->
