@@ -1,10 +1,239 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <title>Puruxe</title>
-    <meta charset="utf-8">
-  </head>
-  <body>
-    <span>Olá, este site está em <b>construção</b>...</span>
-  </body>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puruxê Doces</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+    rel="stylesheet" crossorigin>
+  <link rel="stylesheet" href="./assets/top.css">
+  <link rel="stylesheet" href="./assets/body.css">
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <div class="header-top">
+      <div class="logo">
+        <div class="logo-img-container">
+          <div style="background-image: url('./assets/logo-200-100.jpg');" class="logo-img">
+          </div>
+          <h1 class="hidden" aria-hidden="false">Puruxê</h1>
+          <span class="hidden" aria-hidden="false">Doces</span>
+        </div>
+        <button class="menu-toggle" aria-label="Abrir menu">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 12h18M3 6h18M3 18h18"></path>
+          </svg>
+        </button>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Página Principal</a></li>
+          <li><a href="a-nossa-historia.html">A Nossa História</a></li>
+          <li><a href="colecao-de-presentes.html">Coleção de Presentes</a></li>
+          <li><a href="destaques-do-cardapio.html">Destaques do Cardápio</a></li>
+          <li><a href="para-ocasioes-especiais.html">Para Ocasiões Especiais</a></li>
+          <li><a href="encomendas-e-contato.html">Encomendas & Contato</a></li>
+        </ul>
+        <style>
+          .main-nav a:hover {
+            text-decoration: underline;
+          }
+          .main-nav a.active {
+            background: rgba(255, 192, 203, 0.2);
+            opacity: 0.7;
+            pointer-events: none;
+            cursor: default;
+          }
+        </style>
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const links = document.querySelectorAll('.main-nav a');
+            const currentPage = window.location.pathname.split('/').pop();
+            console.log('Current page:', currentPage);
+            links.forEach(link => {
+              const linkPage = link.getAttribute('href').split('/').pop();
+              console.log('Checking link:', linkPage);
+              if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+                console.log('Match found, adding active class to:', linkPage);
+                link.classList.add('active');
+              }
+            });
+          });
+        </script>
+      </nav>
+  </header>
+  <!-- FIM CABEÇALHO -->
+  <!-- SEÇÃO HERO (DESTAQUE) -->
+  <div class="hero-wrapper">
+  <section class="hero">
+    <div class="hero-image-container desktop-only">
+      <div class="hero-main-img" style="background-image: url('./assets/hero.jpg');"></div>
+    </div>
+
+    <div class="hero-image-container mobile-only text-center">
+      <!-- Representação da ilustração mobile -->
+      <img src="./assets/hero.jpg" alt="Ilustração doceira" class="hero-mobile-img" style="border-radius: 50%;">
+    </div>
+
+    <div class="hero-content">
+      <!-- <h2 class="desktop-only title-large">Celebre os Momentos Mais Doces</h2> -->
+      <img class="desktop-only mb-2" src="./assets/celeb-500-111.png" width="500" height="111" alt="Destaques do Dia">
+
+      <!-- <p class="desktop-only subtitle">Artesanal. Inovador. Inesquecível.</p> -->
+
+      <h2 class="mobile-only title-mobile">Doces que Abraçam o Coração</h2>
+      <button class="btn-primary mobile-only">Saiba Mais</button>
+
+      <div class="promo-box desktop-only flex">
+        <div class="promo-text">
+          <h3>Uma Doçura<br>para sua Mãe</h3>
+          <p class="mt-4">Caixa de Brigadeiros Gourmet</p>
+          <button class="btn-primary mt-4">Explore a Nossa Coleção</button>
+        </div>
+        <div class="promo-images">
+          <img src="./assets/c.jpg" alt="Caixa de doces 1">
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+  <!-- SEÇÃO DE PRODUTOS -->
+  <section class="products">
+    <div class="section-header">
+      <!-- <h2 class="desktop-only">Destaques do Dia</h2> -->
+      <img class="desktop-only mb-2" src="./assets/des-214-36.png" width="214" height="36" alt="Destaques do Dia">
+      <h2 class="mobile-only">Nossos Doces mais Queridos</h2>
+    </div>
+
+    <div class="product-grid">
+      <!-- Produto 1 -->
+      <article class="product-card">
+        <div class="card-image">
+          <img src="./assets/d.jpg" alt="Chocolate Cake">
+        </div>
+        <div class="card-content">
+          <h3>Chocolate Cake</h3>
+          <p>Bolo de chocolate intercalado com Nutella, creme de Ferrero Rocher e brigadeiro de chocolate.</p>
+          <span class="price mobile-only">R$ 17,90</span>
+          <a href="#" class="link-more desktop-only">Descubra Mais</a>
+        </div>
+      </article>
+
+      <!-- Produto 2 -->
+      <article class="product-card">
+        <div class="card-image">
+          <img src="./assets/a.jpg" alt="Caixa de Brigadeiros">
+        </div>
+        <div class="card-content">
+          <h3>Caixa de Brigadeiros Gourmet</h3>
+          <p>Caixa Presente brigadeiros clássicos e macios.</p>
+          <span class="price mobile-only">R$ 35,90</span>
+          <a href="#" class="link-more desktop-only">Descubra Mais</a>
+        </div>
+      </article>
+
+      <!-- Produto 3 -->
+      <article class="product-card">
+        <div class="card-image">
+          <img src="./assets/b.jpg" alt="Torta no Pote Ferrero Rocher">
+        </div>
+        <div class="card-content">
+          <h3>Torta no Pote Ferrero Rocher</h3>
+          <p>Bolo de chocolate intercalado com Nutella, creme de Ferrero Rocher e brigadeiro.</p>
+          <span class="price mobile-only">R$ 17,90</span>
+          <a href="#" class="link-more desktop-only">Descubra Mais</a>
+        </div>
+      </article>
+
+      <!-- Produto 4 -->
+      <article class="product-card">
+        <div class="card-image">
+          <img src="./assets/g.jpg" alt="Torta no Pote Pistache">
+        </div>
+        <div class="card-content">
+          <h3>Torta no Pote Pistache</h3>
+          <p>Bolo de baunilha bem molhadinho intercalado com creme nuvem e recheio de Pistache.</p>
+          <span class="price mobile-only">R$ 17,90</span>
+          <a href="#" class="link-more desktop-only">Descubra Mais</a>
+        </div>
+      </article>
+
+      <!-- Produto 5 -->
+      <article class="product-card">
+        <div class="card-image">
+          <img src="./assets/h.jpg" alt="Cesta de Café da Manhã">
+        </div>
+        <div class="card-content">
+          <h3>Cesta de Café da Manhã</h3>
+          <p>Festival de Bolos Gelados com opções variadas para um amanhecer perfeito.</p>
+          <span class="price mobile-only">R$ 89,90</span>
+          <a href="#" class="link-more desktop-only">Descubra Mais</a>
+        </div>
+      </article>
+
+      <!-- Produto 6 -->
+      <!-- <article class="product-card">
+        <div class="card-image">
+          <img src="./assets/i.jpg" alt="Doce de Leite">
+        </div>
+        <div class="card-content">
+          <h3>Doce de Leite Artesanal</h3>
+          <p>Doce de Leite Artesanal em Pote de Vidro e brigadeiro de chocolate.</p>
+          <span class="price mobile-only">R$ 22,90</span>
+          <a href="#" class="link-more desktop-only">Descubra Mais</a>
+        </div>
+      </article> -->
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS (APENAS DESKTOP) -->
+  <section class="testimonials desktop-only">
+    <div class="testimonial-item">
+      <p>"O bolo mais lindo e delicioso que já dei de presente!"</p>
+    </div>
+    <div class="testimonial-item">
+      <p>"Impressionante atenção aos detalhes e a apresentação dos produtos!"</p>
+    </div>
+    <div class="testimonial-item">
+      <p>"A Puruxê transformou meu aniversário em algo inesquecível."</p>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <div class="footer-content">
+      <div class="socials">
+        <a href="#">Fb</a>
+        <a href="#">Ig</a>
+        <a href="#">Yt</a>
+        <a href="#">Tk</a>
+      </div>
+      <div class="contact-info">
+        <p>📍 Não temos loja física<br>Somente delivery</p>
+      </div>
+      <div class="contact-info">
+        <p>✉️ contato@puruxe.com.br<br>📞 (91) 9999-9999</p>
+      </div>
+      <div class="extra-info">
+        <p>Catálogo: <a href="#">iFood</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
 </html>

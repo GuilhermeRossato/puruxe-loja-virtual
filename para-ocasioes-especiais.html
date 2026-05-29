@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ocasiões Especiais - Puruxê Doces</title>
+
+  <style>
+    .special-occasions {
+      padding: 4rem 10%;
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+    }
+
+    .special-image {
+      flex: 1;
+    }
+
+    .special-image img {
+      border-radius: 50% 50% 0 0;
+    }
+
+    .special-text {
+      flex: 1;
+    }
+
+    .special-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+  </style>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+    rel="stylesheet" crossorigin>
+  <link rel="stylesheet" href="./assets/top.css">
+  <link rel="stylesheet" href="./assets/body.css">
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <div class="header-top">
+      <div class="logo">
+        <div class="logo-img-container">
+          <div style="background-image: url('./assets/logo-200-100.jpg');" class="logo-img">
+          </div>
+          <h1 class="hidden" aria-hidden="false">Puruxê</h1>
+          <span class="hidden" aria-hidden="false">Doces</span>
+        </div>
+        <button class="menu-toggle" aria-label="Abrir menu">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 12h18M3 6h18M3 18h18"></path>
+          </svg>
+        </button>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Página Principal</a></li>
+          <li><a href="a-nossa-historia.html">A Nossa História</a></li>
+          <li><a href="colecao-de-presentes.html">Coleção de Presentes</a></li>
+          <li><a href="destaques-do-cardapio.html">Destaques do Cardápio</a></li>
+          <li><a href="para-ocasioes-especiais.html">Para Ocasiões Especiais</a></li>
+          <li><a href="encomendas-e-contato.html">Encomendas & Contato</a></li>
+        </ul>
+        <style>
+          .main-nav a:hover {
+            text-decoration: underline;
+          }
+          .main-nav a.active {
+            background: rgba(255, 192, 203, 0.2);
+            opacity: 0.7;
+            pointer-events: none;
+            cursor: default;
+          }
+        </style>
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const links = document.querySelectorAll('.main-nav a');
+            const currentPage = window.location.pathname.split('/').pop();
+            console.log('Current page:', currentPage);
+            links.forEach(link => {
+              const linkPage = link.getAttribute('href').split('/').pop();
+              console.log('Checking link:', linkPage);
+              if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+                console.log('Match found, adding active class to:', linkPage);
+                link.classList.add('active');
+              }
+            });
+          });
+        </script>
+      </nav>
+  </header>
+  <!-- FIM CABEÇALHO -->
+  <section class="special-occasions">
+    <div class="special-image"><img src="./assets/d.jpg" alt="Evento Especial"></div>
+    <div class="special-text">
+      <h2>Transforme sua Festa</h2>
+      <p>De aniversários íntimos a grandes celebrações, criamos cardápios de doces personalizados que refletem o seu
+        estilo. Nossos produtos são a peça central que faltava para tornar sua data inesquecível.</p>
+      <button class="btn-primary" style="margin: 2rem 0;">Solicitar Orçamento</button>
+    </div>
+  </section>
+</body>
+
+</html>

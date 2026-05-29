@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Nossa História - Puruxê Doces</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/top.css">
+  <link rel="stylesheet" href="./assets/body.css">
+
+  <style>
+    /* Estilos específicos para a página de história */
+    .history-section {
+      padding: 4rem 10%;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    .history-banner {
+      width: 100%;
+      height: 400px;
+      background-image: url('./assets/hero.jpg');
+      /* Reutilizando a imagem hero para consistência */
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      margin-bottom: 3rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .history-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .history-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: #5c3c27;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .history-text p {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+    }
+
+    .history-quote {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 4rem 0;
+      border-top: 1.5px solid #beb9a7;
+      border-bottom: 1.5px solid #beb9a7;
+      margin: 3rem 0;
+    }
+
+    .history-quote h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-style: italic;
+      color: #7b4f4f;
+    }
+
+    .history-visual {
+      position: relative;
+    }
+
+    .history-visual img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 991px) {
+      .history-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .history-section {
+        padding: 2rem 5%;
+      }
+
+      .history-text h2 {
+        font-size: 2.2rem;
+      }
+
+      .history-banner {
+        height: 250px;
+      }
+
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+    rel="stylesheet" crossorigin>
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <div class="header-top">
+      <div class="logo">
+        <div class="logo-img-container">
+          <div style="background-image: url('./assets/logo-200-100.jpg');" class="logo-img">
+          </div>
+          <h1 class="hidden" aria-hidden="false">Puruxê</h1>
+          <span class="hidden" aria-hidden="false">Doces</span>
+        </div>
+        <button class="menu-toggle" aria-label="Abrir menu">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 12h18M3 6h18M3 18h18"></path>
+          </svg>
+        </button>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Página Principal</a></li>
+          <li><a href="a-nossa-historia.html">A Nossa História</a></li>
+          <li><a href="colecao-de-presentes.html">Coleção de Presentes</a></li>
+          <li><a href="destaques-do-cardapio.html">Destaques do Cardápio</a></li>
+          <li><a href="para-ocasioes-especiais.html">Para Ocasiões Especiais</a></li>
+          <li><a href="encomendas-e-contato.html">Encomendas & Contato</a></li>
+        </ul>
+        <style>
+          .main-nav a:hover {
+            text-decoration: underline;
+          }
+          .main-nav a.active {
+            background: rgba(255, 192, 203, 0.2);
+            opacity: 0.7;
+            pointer-events: none;
+            cursor: default;
+          }
+        </style>
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const links = document.querySelectorAll('.main-nav a');
+            const currentPage = window.location.pathname.split('/').pop();
+            console.log('Current page:', currentPage);
+            links.forEach(link => {
+              const linkPage = link.getAttribute('href').split('/').pop();
+              console.log('Checking link:', linkPage);
+              if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+                console.log('Match found, adding active class to:', linkPage);
+                link.classList.add('active');
+              }
+            });
+          });
+        </script>
+      </nav>
+  </header>
+  <!-- FIM CABEÇALHO -->
+  <!-- CONTEÚDO DA HISTÓRIA -->
+  <main class="history-section">
+    <div class="history-banner"></div>
+
+    <div class="history-content">
+      <div class="history-text">
+        <h2>Onde tudo começou...</h2>
+        <p>A Puruxê Doces nasceu de um sonho simples: transformar ingredientes nobres em momentos de pura felicidade. O
+          que começou em uma pequena cozinha familiar, movido pela paixão pela confeitaria artesanal, hoje se tornou
+          referência em doces que encantam os olhos e o paladar.</p>
+        <p>Nossa filosofia é baseada no cuidado com cada detalhe. Desde a escolha do melhor chocolate até a embalagem
+          final, cada produto é feito para ser o presente perfeito, capaz de expressar carinho e afeto por quem você
+          mais ama.</p>
+      </div>
+
+      <div class="history-visual">
+        <img src="./assets/d.jpg" alt="Nossa Confeitaria">
+      </div>
+
+      <div class="history-quote">
+        <h3>"Doces que abraçam o coração e<br>criam memórias inesquecíveis."</h3>
+      </div>
+
+      <div class="history-visual">
+        <img src="./assets/a.jpg" alt="Processo Artesanal">
+      </div>
+
+      <div class="history-text">
+        <h2>Artesanal e Inovador</h2>
+        <p>Não somos apenas uma doceria; somos curadores de experiências. Estamos constantemente inovando em nosso
+          cardápio, trazendo sabores como nossa famosa Torta de Pistache e os clássicos brigadeiros gourmet, sempre
+          mantendo a essência do preparo feito à mão.</p>
+        <p>Hoje, operamos exclusivamente via delivery em Porto Alegre, garantindo que a mesma qualidade que sai da nossa
+          cozinha chegue fresca e impecável à sua mesa.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- RODAPÉ (Reutilizado) -->
+  <footer>
+    <div class="footer-content">
+      <div class="socials">
+        <a href="#">Fb</a>
+        <a href="#">Ig</a>
+        <a href="#">Yt</a>
+        <a href="#">Tk</a>
+      </div>
+      <div class="contact-info">
+        <p>📍 Não temos loja física<br>Somente delivery em Porto Alegre, RS</p>
+      </div>
+      <div class="contact-info">
+        <p>✉️ contato@puruxe.com.br<br>📞 (51) 9999-9999</p>
+      </div>
+      <div class="extra-info">
+        <p>Catálogo: <a href="#">iFood</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

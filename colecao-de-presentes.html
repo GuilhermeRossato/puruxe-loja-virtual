@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coleção de Presentes - Puruxê Doces</title>
+
+  <link rel="stylesheet" href="./assets/top.css">
+  <link rel="stylesheet" href="./assets/body.css">
+  <style>
+    .gifts-hero {
+      padding: 4rem 5%;
+      text-align: center;
+      background-color: #fcebdc;
+    }
+
+    .gifts-hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: #5c3c27;
+    }
+
+    .gift-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 4rem 10%;
+    }
+
+    .gift-item {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      padding-bottom: 1.5rem;
+    }
+
+    .gift-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .gift-item h3 {
+      margin: 1rem 0;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .badge {
+      background: #c2a15e;
+      color: #fff;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+    rel="stylesheet" crossorigin>
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <div class="header-top">
+      <div class="logo">
+        <div class="logo-img-container">
+          <div style="background-image: url('./assets/logo-200-100.jpg');" class="logo-img">
+          </div>
+          <h1 class="hidden" aria-hidden="false">Puruxê</h1>
+          <span class="hidden" aria-hidden="false">Doces</span>
+        </div>
+        <button class="menu-toggle" aria-label="Abrir menu">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 12h18M3 6h18M3 18h18"></path>
+          </svg>
+        </button>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Página Principal</a></li>
+          <li><a href="a-nossa-historia.html">A Nossa História</a></li>
+          <li><a href="colecao-de-presentes.html">Coleção de Presentes</a></li>
+          <li><a href="destaques-do-cardapio.html">Destaques do Cardápio</a></li>
+          <li><a href="para-ocasioes-especiais.html">Para Ocasiões Especiais</a></li>
+          <li><a href="encomendas-e-contato.html">Encomendas & Contato</a></li>
+        </ul>
+        <style>
+          .main-nav a:hover {
+            text-decoration: underline;
+          }
+          .main-nav a.active {
+            background: rgba(255, 192, 203, 0.2);
+            opacity: 0.7;
+            pointer-events: none;
+            cursor: default;
+          }
+        </style>
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const links = document.querySelectorAll('.main-nav a');
+            const currentPage = window.location.pathname.split('/').pop();
+            console.log('Current page:', currentPage);
+            links.forEach(link => {
+              const linkPage = link.getAttribute('href').split('/').pop();
+              console.log('Checking link:', linkPage);
+              if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+                console.log('Match found, adding active class to:', linkPage);
+                link.classList.add('active');
+              }
+            });
+          });
+        </script>
+      </nav>
+  </header>
+  <!-- FIM CABEÇALHO -->
+  <section class="gifts-hero">
+    <span class="badge">Especial Dia das Mães</span>
+    <h2>Presentes que Encantam</h2>
+    <p>Demonstre seu carinho com nossas seleções exclusivas e embalagens luxuosas.</p>
+  </section>
+
+  <div class="gift-grid">
+    <div class="gift-item">
+      <img src="./assets/c.jpg" alt="Caixa Gourmet">
+      <h3>Caixa de Brigadeiros Gourmet</h3>
+      <p>12 unidades de sabores clássicos e macios.</p>
+    </div>
+    <div class="gift-item">
+      <img src="./assets/h.jpg" alt="Cesta Café">
+      <h3>Cesta Café da Manhã Premium</h3>
+      <p>Uma seleção de bolos gelados e doces artesanais.</p>
+    </div>
+  </div>
+</body>
+
+</html>

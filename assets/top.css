@@ -1,0 +1,58 @@
+.logo-img-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.logo-img {
+  width: 220px;
+  aspect-ratio: 1/0.5;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #f3e7d9;
+}
+.hero-wrapper > .hero {
+  width: 100vw;
+  max-width: 1600px;
+}
+/* HERO SECTION (MOBILE) */
+.hero {
+  padding: 2rem 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: var(--bg-secondary);
+}
+
+.hero-mobile-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+/* HERO DESKTOP */
+.hero {
+  flex-direction: row;
+  justify-content: center;
+  padding: 3rem 10%;
+}
+
+section.hero {
+  background-size: contain;
+  background-position: top left;
+  background-image: url('./hero.jpg');
+  background-repeat: no-repeat;
+  background-color: #f3e7d9;
+}
+
+.hero-content {
+  flex: 1;
+  padding-left: 3rem;
+}
